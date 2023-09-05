@@ -1,0 +1,8 @@
+RewriteEngine ON
+RewriteCond $1 !^(index\.php|resources|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+Header always set Access-control-Allow-Origin "http://localhost"
+Header always set Access-control-Allow-Methods "GET,¨POST, PUT, DELETE"
+Header always set Access-control-Allow-Headers "content-type"
