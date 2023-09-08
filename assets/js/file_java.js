@@ -20,12 +20,12 @@
                     // Mettre à jour la liste déroulante des régions avec les données reçues
                     var regionDropdown = $('#region-dropdown');
                     regionDropdown.empty();
-                    regionDropdown.append($('<options>', {
+                    regionDropdown.append($('<option>', {
                         value: '',
                         text: 'Choisissez une région'
                     }));
                     $.each(regionData, function (index, region) {
-                        regionDropdown.append($('<options>', {
+                        regionDropdown.append($('<option>', {
                             value: region.id_region,
                             text: region.nom,
                         }));
@@ -38,7 +38,7 @@
             });
         } else {
             // Si aucun pays n'est sélectionné, réinitialiser la liste déroulante des régions
-            $('#region-dropdown').empty().append($('<options>', {
+            $('#region-dropdown').empty().append($('<option>', {
                 value: '',
                 text: 'Choisissez une région'
             }));
