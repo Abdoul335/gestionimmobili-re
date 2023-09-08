@@ -43,7 +43,8 @@ class Region_model extends CI_Model
     }
     
     public function getRegionsByCountry($id_pays) {
-        $query = $this->db->get_where('region', array('id_pays' => $id_pays));
+        $this->db->where('id_pays', $id_pays);
+        $query = $this->db->get('region');
         return $query->result_array();
     }
 
